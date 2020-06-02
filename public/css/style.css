@@ -1,0 +1,149 @@
+body{
+    background-color: #F5F9FF;
+}
+section{
+    width: 1000px;
+    margin: 0 auto;
+}
+/* --------------------
+head
+-----------------------*/
+.head{
+    width: 100%;
+    height: 60px;
+    background-color: #66B8FF;
+    /* position: fixed; */
+}
+.head-contain{
+    width: 80%;
+    margin: 0 auto;
+}
+.head h1{
+    font-size: 25px;
+    display: inline;
+    line-height: 60px;
+    color: #fff;
+}
+.head a{
+    font-size: 18px;
+    float: right;
+    display: inline;
+    color: #fff;
+    margin-top: 10px;
+    margin-left: 30px;
+    border-radius: 10px;
+    padding: 4px;
+    background-color: #4886FF;
+    text-decoration: none;
+    display: block;
+}
+/* --------------------
+top
+-----------------------*/
+
+.top-logo{
+    width: 100%;
+    background-image: contain;
+}
+.top-contain{
+    width: 100%;
+    margin: 0 auto;
+}
+.top-btn{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    height: 90px;
+    background-color   : #ddeeff;
+    background-image   : radial-gradient(#66b8ff 7%, transparent 10%),
+    radial-gradient(#66b8ff 7%, transparent 10%);
+    background-position: 0 0, 9px 9px;
+    background-size    : 18px 18px;
+    border: solid 1px #66B8FF;
+}
+.top-btn a{
+    width: 15%;
+    background-color: #66B8FF;
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 15px;
+    box-shadow: 0 0 8px #4886FF;
+}
+
+/* --------------------
+main-left
+-----------------------*/
+
+.main-contain{
+    width: 90%;
+    margin: 0 auto;
+}
+/* .main-left{
+    width: 77%;
+    float: left;
+} */
+
+/* ------------------
+検索バー 
+---------------------*/
+.search {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+.input-text{
+    width: calc(100% - 55px);
+    height: 30px;
+    padding: 10px 16px 10px 45px;
+    background-image: url("../img/search.png");
+    background-size: 20px 20px;
+    background-position: left 8px center;
+    background-repeat: no-repeat;
+    background-color: #e8f2f4;
+    vertical-align : middle;
+    font-size: 15px;
+    border: none;
+}
+.input-submit{
+    height: 30px;
+    width: 50px;
+    margin-bottom: 0;
+    vertical-align : middle;
+    font-size: 18px;
+    border: none;
+}
+.search p{
+    font-size: 10px;
+}
+
+/* ジャンル */
+.main-category{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.main-category a{
+    text-align: center;
+    display: block;
+    width: 25%;
+    color: #fff;
+    background-color: #4886FF;
+    border: solid 1px #fff;
+    font-size: 1.5em;
+    height: 30px;
+    line-height: 30px;
+}
+
+
+
+.f-footer{
+    height: 30px;
+    background-color: #66B8FF;
+    color: #fff;
+}
