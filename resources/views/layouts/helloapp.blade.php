@@ -47,10 +47,12 @@
 <!--*********************
         フッター
     ************************-->
-    <div class="f-footer">
-        <section>
-            <p>aaaa</p>
-        </section>
-    </div>
+    <section>
+        <div class="f-footer">
+            <section>
+                <p>aaaa</p>
+            </section>
+        </div>
+    </section>
 </body>
 </html>

@@ -59,7 +59,8 @@ top
     radial-gradient(#66b8ff 7%, transparent 10%);
     background-position: 0 0, 9px 9px;
     background-size    : 18px 18px;
-    border: solid 1px #66B8FF;
+    border-top: solid 1px #66B8FF;
+    border-bottom: solid 1px #66B8FF;
 }
 .top-btn a{
     width: 15%;
@@ -94,7 +95,7 @@ main-left
 .search {
     width: 80%;
     margin: 0 auto;
-    margin-top: 40px;
+    /* margin-top: 40px; */
 }
 .input-text{
     width: calc(100% - 55px);
@@ -140,7 +141,10 @@ main-left
     line-height: 30px;
 }
 
-
+section{
+    border-right: solid 1px #66B8FF;
+    border-left: solid 1px #66B8FF;
+}
 
 .f-footer{
     height: 30px;
