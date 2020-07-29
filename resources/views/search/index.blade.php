@@ -67,7 +67,7 @@
                                     <p>※この本に説明はありません</p>
                                 @endempty
                                 <div class="main-item-bottom-btn">
-                                    {{-- <a href="{{ url('/search/show',$item) }}" class="bookshelf">本棚に入れる</a> --}}
+                                    <a href="{{ action('SearchController@show',$item->id) }}" class="bookshelf">本棚に入れる</a>
                                     <a href="" class="review">書評を見る</a>
                                     <a href="" class="write">書評を書く</a>
                                 </div>

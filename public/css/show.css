@@ -1,0 +1,162 @@
+.section-show{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-left: solid 1px #66B8FF;
+    border-right: solid 1px #66B8FF;
+}
+.show-top{
+    width: 100%;
+    border: solid 5px #66B8FF;
+    display: flex;
+}
+.show-left{
+    width: 25%;
+}
+.show-left img{
+    width: 100%;
+    object-fit: contain;
+}
+.show-right{
+    padding: 20px 40px;
+    width: 75%;
+}
+.show-right h2{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 30px;
+}
+.show-right h3{
+    margin-top: 10px;
+    text-align: right;
+    font-size: 20px;
+}
+.show-right p{
+    margin-top: 30px;
+    font-size: 15px;
+}
+.show-write{
+    padding-top: 30px;
+    text-align: center;
+}
+
+.write{
+    background-color: #4886FF;
+    color: #fff;
+    font-size: 14px;
+    display: inline-block;
+    padding: 6px 6px 6px 30px;
+    background-image: url("../img/book_1.png");
+    background-size: 17px 17px;
+    background-position: left 8px center;
+    background-repeat: no-repeat;
+    border-radius: 3px;
+}
+
+
+.show-bottom{
+    width: 100%;
+    border: solid 5px #66B8FF;
+}
+.show-bottom h2{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 25px;
+    border-bottom: solid 2px #4886FF;
+}
+.show-bottom-text{
+    border: solid 2px #4886FF;
+    width: 90%;
+    margin: 30px auto;
+    padding: 50px;
+}
+.show-bottom h3{
+    width: 90%;
+    margin:  0 auto;
+}
+.show-comment{
+    border: solid 2px #4886FF;
+    width: 90%;
+    margin: 30px auto;
+}
+.show-comment-one{
+    border-bottom:  solid 1px #707070;
+    display: flex;
+    margin: 10px;
+    box-sizing: border-box;
+    position: relative;
+}
+.show-comment-one img{
+    width: 50px;
+    height: 50px;
+}
+.show-comment-one p{
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 90%;
+    font-size: 18px;
+    word-wrap: break-word;
+}
+.show-comment-one h4{
+    font-size: 13px;
+    color: #707070;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
+.show-comment-write{
+    border: solid 2px #4886FF;
+    width: 90%;
+    margin: 30px auto;
+    padding: 10px;
+}
+
+.cp_iptxt {
+	position: relative;
+}
+.cp_iptxt input[type='text'] {
+	font: 15px/24px sans-serif;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 0.3em;
+	transition: 0.3s;
+	letter-spacing: 1px;
+	/* color: #aaaaaa; */
+	border: 1px solid #1b2538;
+	border-radius: 4px;
+}
+.ef input[type='text']:focus {
+	border: 1px solid rgb(4, 67, 194);
+	outline: none;
+	box-shadow: 0 0 5px 1px rgba(4, 67, 194, .5);
+}
+.cp_iptxt textarea{
+	font: 15px/24px sans-serif;
+	box-sizing: border-box;
+    width: 780px;
+    height: 100px;
+	padding: 0.3em;
+	transition: 0.3s;
+	letter-spacing: 1px;
+	/* color: #aaaaaa; */
+	border: 1px solid #1b2538;
+	border-radius: 4px;
+}
+.ef textarea:focus {
+	border: 1px solid rgb(4, 67, 194);
+	outline: none;
+	box-shadow: 0 0 5px 1px rgba(4, 67, 194, .5);
+}
+.cp_iptxt input[type='submit'] {
+	font: 15px/24px sans-serif;
+	box-sizing: border-box;
+	padding: 0.3em;
+	transition: 0.3s;
+	letter-spacing: 1px;
+	/* color: #aaaaaa; */
+	border: 1px solid #4886FF;
+    border-radius: 4px;
+    background-color: #66B8FF;
+    color: #fff;
+}

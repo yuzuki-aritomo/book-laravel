@@ -17,8 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/scraping',  'ScrapingController@index');
+
 Route::get('/search',  'SearchController@index');
-Route::get('/search/show',  'SearchController@show');
 Route::post('/search',  'SearchController@post');
 
-Route::post('/show',  'ShowController@index');
+Route::get('/search/{id}',  'SearchController@show');

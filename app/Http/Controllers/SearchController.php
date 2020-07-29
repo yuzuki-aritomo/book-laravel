@@ -15,10 +15,15 @@ class SearchController extends Controller
         $this->validate($request, $validate_rule);
         // GoogleAPIの処理
         $search = $request->search;
-        $data = "https://www.googleapis.com/books/v1/volumes?q=".$search;
+        $data = "https://www.googleapis.com/books/v1/volumes?q=".$search."&maxResults=20";
         $json = file_get_contents($data);
         $json_decode = json_decode($json);
         return view('search.index',compact("json_decode"));
-        // return view('search.index',$json_decode);
+    }
+    public function show($id){
+        $data = "https://www.googleapis.com/books/v1/volumes/".$id;
+        $json = file_get_contents($data);
+        $json_decode = json_decode($json);
+        return view('search.show',compact("json_decode"));
     }
 }
