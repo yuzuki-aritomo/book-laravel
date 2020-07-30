@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'ScrapingController@index');
 Route::get('/scraping',  'ScrapingController@index');
 
 Route::get('/search',  'SearchController@index');
