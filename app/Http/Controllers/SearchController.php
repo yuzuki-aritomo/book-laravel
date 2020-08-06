@@ -15,7 +15,8 @@ class SearchController extends Controller
         $this->validate($request, $validate_rule);
         // GoogleAPIの処理
         $search = $request->search;
-        $data = "https://www.googleapis.com/books/v1/volumes?q=".$search."&maxResults=20";
+        $search_val = str_replace(' ','+',$search);
+        $data = "https://www.googleapis.com/books/v1/volumes?q=".$search_val."&maxResults=20"."&country=JP";
         $json = file_get_contents($data);
         $json_decode = json_decode($json);
         return view('search.index',compact("json_decode"));
