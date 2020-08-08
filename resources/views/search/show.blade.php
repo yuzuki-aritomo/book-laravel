@@ -15,7 +15,12 @@
                     @endisset
                     <div class="show-right">
                         <h2><span>{{ $json_decode->{'volumeInfo'}->{'title'} }}</span></h2>
-                        <h3>著者名　岸見一郎</h3>
+                        @isset($json_decode->{'volumeInfo'}->{'authors'})
+                            {{-- *******配列をそのまま出力出来ないのでfor文で出力******* --}}
+                            @foreach ($json_decode->{'volumeInfo'}->{'authors'} as $author)
+                                <h3>{{ $author }} </h3>
+                            @endforeach
+                        @endisset
                         <div>
                             @isset($json_decode->{'volumeInfo'}->{'description'})
                                 <p>{{ $json_decode->{'volumeInfo'}->{'description'} }}</p>
@@ -25,7 +30,7 @@
                             @endempty
                         </div>
                         <div class="show-write">
-                            <a href="" class="write">書評を書く</a>
+                            <a href="{{ action('PostController@index',$json_decode->id) }}" class="write">書評を書く</a>
                         </div>
                     </div>
                 </div>

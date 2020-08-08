@@ -13,13 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'SearchController@index');
-Route::get('/scraping',  'ScrapingController@index');
+Route::get('/', 'ShowController@index');
+// Route::get('/scraping',  'ScrapingController@index');
 
 Route::get('/search',  'SearchController@index');
 Route::post('/search',  'SearchController@post');
-
 Route::get('/search/{id}',  'SearchController@show');
+
+Route::get('/post/{id}',  'PostController@index');
+Route::post('/post/{id}/create',  'PostController@create');
+
+Route::get('/show',  'ShowController@index');
+Route::get('/show/{id}',  'ShowController@show');
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

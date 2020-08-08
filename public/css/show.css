@@ -71,6 +71,9 @@
     margin: 30px auto;
     padding: 50px;
 }
+.show-bottom-text p{
+    white-space: pre-wrap;
+}
 .show-bottom h3{
     width: 90%;
     margin:  0 auto;
@@ -134,7 +137,7 @@
 .cp_iptxt textarea{
 	font: 15px/24px sans-serif;
 	box-sizing: border-box;
-    width: 780px;
+    width: 100%;
     height: 100px;
 	padding: 0.3em;
 	transition: 0.3s;
@@ -159,4 +162,39 @@
     border-radius: 4px;
     background-color: #66B8FF;
     color: #fff;
+}
+
+/* ---------------------
+form
+-----------------------*/
+form{
+    margin: 0 auto;
+    width: 90%;
+    margin-bottom: 50px;
+}
+table{
+    width: 100%;
+}
+th input{
+    font-size: 30px;
+    width: 100%;
+    border-radius: 5px;
+    border: solid 2px #70CAFF;
+}
+table tr:nth-child(2){
+    margin-top: 30px;
+}
+td textarea{
+    margin-top: 30px;
+    font-size: 20px;
+    width: 100%;
+    border-radius: 5px;
+    border: solid 2px #70CAFF;
+}
+.form-btn{
+    background-color: #70CAFF;
+    float: right;
+    font-size: 30px;
+    border-radius: 5px;
+    border: solid 2px #70CAFF;
 }
