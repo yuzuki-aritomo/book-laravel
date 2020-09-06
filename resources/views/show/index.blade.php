@@ -50,7 +50,7 @@
                                     //整形したい文字列
                                     $text = $item->text;
                                     //文字数の上限
-                                    $limit = 190;
+                                    $limit = 120;
                                     if(mb_strlen($text) > $limit) { 
                                         $title = mb_substr($text,0,$limit);
                                         $text = $title." . . .";
