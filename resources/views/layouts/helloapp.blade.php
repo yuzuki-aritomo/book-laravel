@@ -29,7 +29,7 @@
         top
     ***************************-->
     <section>
-        <img class="top-logo" src="img/top-logo.png" alt="">
+        <img class="top-logo" src="{{ asset('img/top-logo.png') }}" alt="">
         <div class="top-contain">
             <div class="top-btn">
                 <a href="{{ action('ShowController@index') }}">書評</a>
