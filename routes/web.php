@@ -20,8 +20,8 @@ Route::get('/search',  'SearchController@index');
 Route::post('/search',  'SearchController@post');
 Route::get('/search/{id}',  'SearchController@show');
 
-Route::get('/post/{id}',  'PostController@index');
-Route::post('/post/{id}/create',  'PostController@create');
+Route::get('/post/{id}',  'PostController@index')->middleware('auth');
+Route::post('/post/{id}/create',  'PostController@create')->middleware('auth');
 
 Route::get('/show',  'ShowController@index');
 Route::get('/show/{id}',  'ShowController@show');
