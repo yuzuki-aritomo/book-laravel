@@ -73,9 +73,9 @@
                                 @endphp
                                 <p>{{ $text }}</p>
                                 <div class="main-item-bottom-btn">
-                                    <a href="{{ action('ShowController@skhow',$item->id) }}" class="write">詳細を見る</a>
-                                    <a href="{{ action('ShowController@show',$item->id) }}" class="bookshelf">修正する</a>
-                                    <a href="{{ action('ShowController@show',$item->id) }}" class="review">削除する</a>
+                                    <a href="{{ action('ShowController@show',$item->id) }}" class="write">詳細を見る</a>
+                                    <a href="{{ action('PostController@edit',$item->id) }}" class="bookshelf">修正する</a>
+                                    <a href="{{ action('PostController@delete',$item->id) }}" class="review">削除する</a>
                                 </div>
                             </div>
                         </div>
