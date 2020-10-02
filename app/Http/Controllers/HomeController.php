@@ -29,6 +29,6 @@ class HomeController extends Controller
         $user_id = Auth::id();
         // $items = DB::table('review')->where('user_id',$user_id)->get();
         $items = User::find($user_id)->review;
-        return view('show.index',['items' => $items]);
+        return view('home',['items' => $items]);
     }
 }
