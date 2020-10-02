@@ -42,21 +42,15 @@ class PostController extends Controller
     public function update(Request $request){
         $id = $request->id;
         $user_id = $request->user_id;
-        // $params = [
-        //     'title' => $request->title,
-        //     'text' => $request->text,
-        // ];
         $data = User::find($user_id)->review->where('id',$id)->first();
         $data->title = $request->title;
         $data->text = $request->text;
         $data->save();
-        // $data->update($params);
         return redirect("/show/$id");
     }
     public function delete($id){
-        // $data = "https://www.googleapis.com/books/v1/volumes/".$id;
-        // $json = file_get_contents($data);
-        // $json_decode = json_decode($json);
-        // return view('post.index',compact("json_decode"));
+        $user_id = Auth::id();
+        User::find($user_id)->review->where('id',$id)->first()->delete();
+        return redirect("/home");
     }
 }

@@ -75,7 +75,11 @@
                                 <div class="main-item-bottom-btn">
                                     <a href="{{ action('ShowController@show',$item->id) }}" class="write">詳細を見る</a>
                                     <a href="{{ action('PostController@edit',$item->id) }}" class="bookshelf">修正する</a>
-                                    <a href="{{ action('PostController@delete',$item->id) }}" class="review">削除する</a>
+                                    {{-- <form name="" action="{{ action('PostController@delete',$item->id) }}"  method="DELETE">
+                                        @csrf
+                                        <button type="submit">削除</button>
+                                    </form> --}}
+                                    <a href="{{ action('PostController@delete',$item->id) }}" class="review">削除する   </a>
                                 </div>
                             </div>
                         </div>
