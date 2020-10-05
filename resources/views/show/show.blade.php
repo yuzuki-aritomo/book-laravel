@@ -61,6 +61,15 @@
                             <p>楽し方です！！</p>
                             <h4>2020/5/23</h4>
                         </div>
+                        @isset($comments)
+                            @foreach ($comments as $comment)
+                            <div class="show-comment-one">
+                                <img src="{{ asset('/img/cat.jpg') }}" alt="">
+                                <p>{{ $comment->text }}</p>
+                                <h4>2020/5/23</h4>
+                            </div>
+                            @endforeach
+                        @endisset
                     </div>
                     <h3>コメントを書く</h3>
                     <div class="show-comment-write">
