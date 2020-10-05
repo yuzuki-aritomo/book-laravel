@@ -31,5 +31,4 @@ class Review extends Model
     public function getData(){
         return $this->id . $this->title . $this->user->id;
     }
-
 }
