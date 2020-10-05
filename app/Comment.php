@@ -16,14 +16,14 @@ class Comment extends Model
         'text' => 'required',
     );
 
-    public function user()
-    {
-        return $this->belongsTo('App\User','usr_id');
-    }
-
     public function review()
     {
-        return $this->belongsTo('App\User','usr_id');
+        return $this->belongsTo('App\Review','book_id');
+    }
+
+    public function user()
+    {
+        return $this->belongsTo('App\User','user_id');
     }
 
 }
