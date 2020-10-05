@@ -19,6 +19,11 @@ class PostController extends Controller
     }
 
     public function create(Request $request){
+        $rules =  [
+            'title' => 'required',
+            'text' => 'required',
+        ];
+        $this->validate($request,$rules);
         $params = [
             'user_id' => $request->user_id,
             'book_id' => $request->book_id,
