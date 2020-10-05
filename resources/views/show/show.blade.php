@@ -64,16 +64,11 @@
                     </div>
                     <h3>コメントを書く</h3>
                     <div class="show-comment-write">
-                        <!-- <form action="">
-                            <input type="text">
-                            <input type="submit" value="コメントを送信">
-                            <button type="submit" value="コメントを送信"></button>
-                        </form> -->
                         <div class="cp_iptxt">
                             <form action="">
                                 <label class="ef">
                                     <!-- <input type="textarea" placeholder="コメント"> -->
-                                    <textarea name="" id="" cols="70" rows="10"></textarea>
+                                    <textarea name="" id="" cols="90" rows="10"></textarea>
                                 </label>
                                 <input type="submit" value="コメントを送信">
                             </form>
