@@ -18,8 +18,8 @@ class CreateReviewTable extends Migration
             $table->integer('user_id');
             $table->string('book_id');
             $table->string('book_title');
-            $table->string('book_author');
-            $table->longText('book_img');
+            $table->string('book_author')->nullable();
+            $table->longText('book_img')->nullable();
             $table->string('title');
             $table->longText('text');
             $table->timestamps();
