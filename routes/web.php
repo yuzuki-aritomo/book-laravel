@@ -22,9 +22,14 @@ Route::get('/search/{id}',  'SearchController@show');
 
 Route::get('/post/{id}',  'PostController@index')->middleware('auth');
 Route::post('/post/{id}/create',  'PostController@create')->middleware('auth');
+Route::get('/post/{id}/edit',  'PostController@edit')->middleware('auth');
+Route::post('/post/{id}/update',  'PostController@update')->middleware('auth');
+Route::get('/post/{id}/delete',  'PostController@delete')->middleware('auth');
+
 
 Route::get('/show',  'ShowController@index');
 Route::get('/show/{id}',  'ShowController@show');
+Route::post('/show/{id}/comment',  'CommentsController@create');
 
 
 Auth::routes();

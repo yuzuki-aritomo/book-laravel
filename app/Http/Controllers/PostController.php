@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth; 
 use App\Review;
+use App\User;
+
 
 class PostController extends Controller
 {
@@ -28,5 +30,27 @@ class PostController extends Controller
         ];
         DB::table('review')->insert($params);
         return redirect('/');
+    }
+    
+    public function edit($id){
+        $item = DB::table('review')->where('id',$id)->first();
+        $data = "https://www.googleapis.com/books/v1/volumes/".$item->book_id;
+        $json = file_get_contents($data);
+        $json_decode = json_decode($json);
+        return view('post.edit',compact("json_decode","item"));
+    }
+    public function update(Request $request){
+        $id = $request->id;
+        $user_id = $request->user_id;
+        $data = User::find($user_id)->review->where('id',$id)->first();
+        $data->title = $request->title;
+        $data->text = $request->text;
+        $data->save();
+        return redirect("/show/$id");
+    }
+    public function delete($id){
+        $user_id = Auth::id();
+        User::find($user_id)->review->where('id',$id)->first()->delete();
+        return redirect("/home");
     }
 }

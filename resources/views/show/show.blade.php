@@ -64,17 +64,15 @@
                     </div>
                     <h3>コメントを書く</h3>
                     <div class="show-comment-write">
-                        <!-- <form action="">
-                            <input type="text">
-                            <input type="submit" value="コメントを送信">
-                            <button type="submit" value="コメントを送信"></button>
-                        </form> -->
                         <div class="cp_iptxt">
-                            <form action="">
+                            <form action="{{ action('CommentsController@create',$item->id) }}" method="POST">
+                                @csrf
                                 <label class="ef">
                                     <!-- <input type="textarea" placeholder="コメント"> -->
-                                    <textarea name="" id="" cols="70" rows="10"></textarea>
+                                    <textarea name="text" id="" cols="90" rows="10"></textarea>
                                 </label>
+                                <input type="hidden" value="{{ Auth::id() }}" name="user_id">
+                                <input type="hidden" value="{{ $item->id }}" name="book_id">
                                 <input type="submit" value="コメントを送信">
                             </form>
                         </div>

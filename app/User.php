@@ -8,6 +8,18 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
+
+    //hasMany設定
+    public function review()
+    {
+        return $this->hasMany('App\Review');
+    }
+
+    public function comment()
+    {
+        return $this->hasMany('App\Comment');
+    }
+
     use Notifiable;
 
     /**

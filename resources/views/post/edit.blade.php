@@ -42,13 +42,14 @@
             <div class="main-contain">
                 <div class="show-bottom">
                     {{-- <form action="/Post/create" method="POST"> --}}
-                    <form action="{{ action('PostController@create',$json_decode->id) }}" method="POST">
+                    <form action="{{ action('PostController@update',$json_decode->id) }}" method="POST">
                         @csrf
                         <table>
                             {{-- <tr>
                                 <th><input class="border" name="user_id" type="number"></th>
                             </tr> --}}
                             {{-- 必要な本の情報、本のid、本の題名、作者、サムネ画像リンク、説明文 --}}
+                            <input class="border" name="id" value="{{ $item->id }}" type="hidden">
                             <input class="border" name="user_id" value="{{ Auth::id() }}" type="hidden">
                             <input class="border" name="book_id" value="{{ $json_decode->id }}" type="hidden">
                             <input class="border" name="book_title" value="{{ $json_decode->{'volumeInfo'}->{'title'} }}" type="hidden">
@@ -69,13 +70,13 @@
                             <tr>
                                 <th>
                                     <h2>タイトル</h2>
-                                    <input class="border" name="title" value="Title" type="text">
+                                    <input class="border" name="title" value="{{$item->title}}" type="text">
                                 </th>
                             </tr>
                             <tr>
                                 <td>
                                     <h2>本文</h2>
-                                    <textarea name="text" cols="30" rows="25">text</textarea>
+                                    <textarea name="text" cols="30" rows="25">{{ $item->text }}</textarea>
                                 </td>
                             </tr>
                         </table>
