@@ -29,6 +29,7 @@ Route::get('/post/{id}/delete',  'PostController@delete')->middleware('auth');
 
 Route::get('/show',  'ShowController@index');
 Route::get('/show/{id}',  'ShowController@show');
+Route::post('/show/{id}/comment',  'CommentsController@create');
 
 
 Auth::routes();
