@@ -11,7 +11,7 @@ class Comment extends Model
     protected $guarded = array('id');
 
     public static $rules = array(
-        'user_id' => 'required',
+        'user_id' => 'requiredshow',
         'book_id' => 'required',
         'text' => 'required',
     );

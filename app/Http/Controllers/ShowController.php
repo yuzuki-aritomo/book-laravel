@@ -19,7 +19,8 @@ class ShowController extends Controller
         $data = "https://www.googleapis.com/books/v1/volumes/".$item->book_id;
         $json = file_get_contents($data);
         $json_decode = json_decode($json);
+        $comments = Review::find($id)->comment;
         // return view('show.show',['item' => $item,compact("json_decode")]);
-        return view('show.show',compact("json_decode","item"));
+        return view('show.show',compact("json_decode","item","comments"));
     }
 }
