@@ -24,7 +24,11 @@ head
     line-height: 60px;
     color: #fff;
 }
-.head a{
+.head h1 a:link,.head h1 a:visited,.head h1 a:hover,.head h1 a:active {
+    color: #fff;
+    text-decoration: none;
+}
+.head .head-right{
     font-size: 18px;
     float: right;
     display: inline;

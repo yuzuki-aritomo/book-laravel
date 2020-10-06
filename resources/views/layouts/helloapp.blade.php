@@ -18,9 +18,9 @@
     <section>
         <div class="head">
             <div class="head-contain">
-                <h1>人生の1冊</h1>
-                <a href="{{url('/login')}}">ログイン</a>
-                <a href="{{url('/register')}}">新規登録</a>
+                <h1><a href="{{url('/')}}">人生の1冊</a></h1>
+                <a href="{{url('/login')}}" class="head-right">ログイン</a>
+                <a href="{{url('/register')}}" class="head-right">新規登録</a>
             </div>
         </div>
     </section>
