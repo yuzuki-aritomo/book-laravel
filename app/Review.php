@@ -20,11 +20,15 @@ class Review extends Model
 
     public function user()
     {
-        return $this->belongsTo('App\User');
+        return $this->belongsTo('App\User','user_id');
+    }
+
+    public function comment()
+    {
+        return $this->hasMany('App\Comment','book_id');
     }
 
     public function getData(){
         return $this->id . $this->title . $this->user->id;
     }
-
 }

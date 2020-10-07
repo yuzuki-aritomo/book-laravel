@@ -51,30 +51,30 @@
                     </div>
                     <h3>コメント</h3>
                     <div class="show-comment">
-                        <div class="show-comment-one">
-                            <img src="{{ asset('/img/horse.jpg') }}" alt="">
-                            <p>面白かったですddddddddddddddddddddddddddddddddddddddddddsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssdd</p>
-                            <h4>2020/5/3</h4>
-                        </div>
-                        <div class="show-comment-one">
-                            <img src="{{ asset('/img/cat.jpg') }}" alt="">
-                            <p>楽し方です！！</p>
-                            <h4>2020/5/23</h4>
-                        </div>
+                        @foreach ($comments as $comment)
+                            <div class="show-comment-one">
+                                <img src="{{ asset('/img/cat.jpg') }}" alt="">
+                                <p>{{ $comment->text }}</p>
+                                <h4>2020/5/23</h4>
+                            </div>
+                        @endforeach
+                        @empty($comments->item)
+                            <div class="show-comment-one">
+                                <p>※まだコメントがありません</p>
+                            </div>
+                        @endempty
                     </div>
                     <h3>コメントを書く</h3>
                     <div class="show-comment-write">
-                        <!-- <form action="">
-                            <input type="text">
-                            <input type="submit" value="コメントを送信">
-                            <button type="submit" value="コメントを送信"></button>
-                        </form> -->
                         <div class="cp_iptxt">
-                            <form action="">
+                            <form action="{{ action('CommentsController@create',$item->id) }}" method="POST">
+                                @csrf
                                 <label class="ef">
                                     <!-- <input type="textarea" placeholder="コメント"> -->
-                                    <textarea name="" id="" cols="70" rows="10"></textarea>
+                                    <textarea name="text" id="" cols="90" rows="10"></textarea>
                                 </label>
+                                <input type="hidden" value="{{ Auth::id() }}" name="user_id">
+                                <input type="hidden" value="{{ $item->id }}" name="book_id">
                                 <input type="submit" value="コメントを送信">
                             </form>
                         </div>
