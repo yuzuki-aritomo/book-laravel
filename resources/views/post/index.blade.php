@@ -3,6 +3,15 @@
 {{-- head内で個別に読み込むファイル --}}
 @section('head')
     <link rel="stylesheet" href="{{ asset('css/show.css') }}">
+
+    <script src="https://unpkg.com/react@16.8.6/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16.8.6/umd/react-dom.production.min.js"></script>
+  
+    <script src="{{ asset('vendor/laraberg/js/laraberg.js') }}"></script>
+    <script src="{{ asset('js/app.js') }}" defer></script>
+  
+    <link rel="stylesheet" href="{{asset('vendor/laraberg/css/laraberg.css')}}">
+    <link rel="stylesheet" href="{{asset('css/app.css')}}">
 @endsection
 
 {{-- メインの部分のファイル --}}
@@ -81,7 +90,31 @@
                         </table>
                         <input class="form-btn" value="書き込む" type="submit">
                     </form>
+                    <form action="  " method="POST">
+                        @csrf
+                        <fieldset class="uk-fieldset">
+                            <div class="laraberg-sidebar">
+                                <textarea name="excerpt" placeholder="Excerpt" rows="10"></textarea>
+                            </div>
+                            <div class="uk-margin">
+                                <input id="article-title" type="text" class="uk-input uk-form-large {{ $errors->get('title') ? 'uk-form-danger' : '' }}" name="title" placeholder="Title" value="{{old('title')}}" />
+                            </div>
+                            <div class="uk-margin">
+                                <textarea name="content" id="content" hidden>{{ old('content') }}</textarea>
+                            </div>
+                        </fieldset>
+                        <a href="/" class="uk-button uk-button-danger" type="submit">Cancel</a>
+                        <button class="uk-button uk-button-primary" type="submit">Submit</button>
+                    </form>
                 </div>
             </div>
         </section>
 @endsection
+
+@section('scripts')
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        Laraberg.init('content', { height: '600px', laravelFilemanager: true, sidebar: true })
+    })
+</script>
+@stop

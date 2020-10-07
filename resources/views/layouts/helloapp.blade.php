@@ -29,13 +29,13 @@
         top
     ***************************-->
     <section>
-        <img class="top-logo" src="{{ asset('img/top-logo.png') }}" alt="">
+        <img class="top-logo" src="img/top-logo.png" alt="">
         <div class="top-contain">
             <div class="top-btn">
                 <a href="{{ action('ShowController@index') }}">書評</a>
                 <a href="{{ action('ShowController@index') }}">本を探す</a>
                 <a href="{{ action('ShowController@index') }}">人生の一冊</a>
-                <a href="{{ action('HomeController@index') }}">マイページ</a>
+                <a href="{{ action('ShowController@index') }}">おすすめする</a>
             </div>
         </div>
     </section>
@@ -55,4 +55,5 @@
         </div>
     </section>
 </body>
+@yield('scripts')
 </html>
