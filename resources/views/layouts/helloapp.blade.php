@@ -55,4 +55,5 @@
         </div>
     </section>
 </body>
+@yield('scripts')
 </html>
