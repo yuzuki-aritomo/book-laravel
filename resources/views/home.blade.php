@@ -27,6 +27,7 @@
 {{-- head内で個別に読み込むファイル --}}
 @section('head')
     <link rel="stylesheet" href="{{ asset('css/search.css') }}">
+    <script type="text/javascript" src="{{ asset('js/index.js') }}"></script>
 @endsection
 
 {{-- メインの部分のファイル --}}
@@ -79,7 +80,7 @@
                                         @csrf
                                         <button type="submit">削除</button>
                                     </form> --}}
-                                    <a href="{{ action('PostController@delete',$item->id) }}" class="review">削除する   </a>
+                                    <a onClick="delete_alert(event);return false;" href="{{ action('PostController@delete',$item->id) }}" class="review">削除する</a>
                                 </div>
                             </div>
                         </div>
